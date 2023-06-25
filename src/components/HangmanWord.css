@@ -1,0 +1,25 @@
+.word-container {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 3rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.letter-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5em;
+  aspect-ratio: 1 / 1;
+  background-color: #e6e6e6;
+  border-radius: var(--border-radius);
+}
+
+.letter-hidden {
+  visibility: hidden;
+}
+
+.letter-revealed {
+  background-color: #ff8f8f;
+}

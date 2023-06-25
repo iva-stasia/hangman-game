@@ -1,0 +1,25 @@
+:root {
+  --border-radius: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+button {
+  display: inline-block;
+  font-family: inherit;
+  font-size: inherit;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+}

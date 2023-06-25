@@ -1,0 +1,99 @@
+.drawing-container {
+  --line-width: 8px;
+  --color: #000000;
+  --line-length: 140px;
+  position: relative;
+  margin-left: -30%;
+  height: 300px;
+}
+
+.drawing-container * {
+  position: absolute;
+  background-color: var(--color);
+}
+
+.line1 {
+  bottom: 0;
+  width: var(--line-length);
+  height: var(--line-width);
+  border-radius: 1rem;
+}
+
+.line2 {
+  left: calc(var(--line-length) / 2 - var(--line-width) / 2);
+  height: 100%;
+  width: var(--line-width);
+  border-radius: 1rem;
+}
+
+.line3 {
+  left: calc(var(--line-length) / 2 - var(--line-width) / 2);
+  width: var(--line-length);
+  height: var(--line-width);
+  border-radius: 1rem;
+}
+
+.line4 {
+  left: calc(var(--line-length) / 2 + var(--line-length) - var(--line-width));
+  height: calc(var(--line-length) / 3);
+  width: var(--line-width);
+  border-radius: 1rem 1rem 0 0;
+}
+
+.head {
+  top: calc(var(--line-length) / 3);
+  left: calc(
+    var(--line-length) / 2 + var(--line-length) - var(--line-width) / 2 -
+      (var(--line-length) / 2.5) / 2
+  );
+  width: calc(var(--line-length) / 2.5);
+  height: calc(var(--line-length) / 2.5);
+  border: var(--line-width) solid var(--color);
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.body {
+  top: calc(var(--line-length) / 3 + var(--line-length) / 2.5);
+  left: calc(var(--line-length) / 2 + var(--line-length) - var(--line-width));
+  height: calc(var(--line-length) / 2);
+  width: var(--line-width);
+}
+
+.hand1,
+.hand2 {
+  top: var(--line-length);
+  left: calc(var(--line-length) / 2 + var(--line-length));
+  height: calc(var(--line-length) / 2);
+  width: var(--line-width);
+  border-radius: 0 0 1rem 1rem;
+  rotate: -130deg;
+  transform-origin: top left;
+}
+
+.hand2 {
+  left: calc(
+    var(--line-length) / 2 + var(--line-length) - var(--line-width) * 2
+  );
+  rotate: 130deg;
+  transform-origin: top right;
+}
+
+.leg1, .leg2 {
+  top: calc(
+    var(--line-length) / 3 + var(--line-length) / 2.5 + var(--line-length) / 2
+  );
+  left: calc(var(--line-length) / 2 + var(--line-length) - var(--line-width));
+  height: calc(var(--line-length) / 2);
+  width: var(--line-width);
+  border-radius: 0 0 1rem 1rem;
+  rotate: -30deg;
+  transform-origin: top left;
+}
+
+.leg2 {
+  left: calc(var(--line-length) / 2 + var(--line-length) - var(--line-width));
+  height: calc(var(--line-length) / 2);
+  rotate: 30deg;
+  transform-origin: top right;
+}
